@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container" onclick="playMusic()">
+        <div class="card">
+            <div class="front">
+                <h1>🎂</h1>
+                <p>Clique para abrir</p>
+            </div>
+            <div class="back">
+                <h2>Parabéns!</h2>
+                <p>Feliz Aniversário pai, Deus te abençoe nesse dia e sempre. aproveita seu dia tmj👍</p>
+                <span>✨🎈🎁</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bday-music" loop>
+        <source src="videoplayback.weba" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('bday-music');
+            audio.play();
+            document.querySelector('.card').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
